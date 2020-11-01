@@ -1,0 +1,38 @@
+{
+  "name": "abdo17r",
+  "version": "1.0.0",
+  "description": "App to create public and private code snippets",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "admin-lte": "^3.0.5",
+    "chromedriver": "^80.0.1",
+    "connect-mongo": "^3.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "jquery": "^3.5.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.11",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon app",
+    "start": "cross-env NODE_ENV=production node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdo Rabah",
+  "license": "ISC"
+}

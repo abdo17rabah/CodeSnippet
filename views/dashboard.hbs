@@ -1,0 +1,38 @@
+<h6> Dashboard </h6>
+<h3> Welcome {{name}} </h3>
+<p>here are your Code Snippets</p>
+{{#if codeSnippets}}
+<table class="stripped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Language</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each codeSnippets }}
+        <tr>
+            <td><a href="/codesnippets/{{_id}}">{{title}}</a></td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            <td><span class="dash-status">{{status}}</span></td>
+            <td>{{language}}</td>
+            <td>
+                <a href="/codesnippets/edit/{{_id}}" class="btn btn-float">
+                <i class="fas fa-edit"></i></a>
+                <form action="/codesnippets/{{_id}}" method="POST" id="delete-form">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn red"><i class="fas fa-trash"></i></button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<p>You have no Code Snippets :( </p>
+
+{{/if }}
